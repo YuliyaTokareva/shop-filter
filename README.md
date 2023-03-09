@@ -1,6 +1,6 @@
 <h1>Shop app</h1>
 
-<h2><a href="" rel="nofollow">Site link</a></h2>
+<h2><a href="https://shop-filter-0803.netlify.app/" rel="nofollow">live site link</a></h2>
 
 <h3>Tasks:</h3>
 
