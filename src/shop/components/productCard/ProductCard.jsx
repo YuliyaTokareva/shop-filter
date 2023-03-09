@@ -1,9 +1,11 @@
 import React from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import './productCard.scss';
 
 const ProductCard = ({ data }) => {
+  const navigate = useNavigate();
   return (
-    <article className="card">
+    <article className="card" onClick={() => navigate(`${data.id}`)}>
       <div className="image">
         <img src={`${data.img}`} alt={data.name} className="image__photo" />
       </div>
@@ -12,7 +14,9 @@ const ProductCard = ({ data }) => {
         <p className="text__price">${data.price}</p>
         <p className="text__brand">{data.brand}</p>
         <p className="text__description">{data.description}</p>
-        <button className="text__button">View details</button>
+        <button className="text__button" onClick={() => navigate(`${data.id}`)}>
+          View details
+        </button>
       </div>
     </article>
   );
