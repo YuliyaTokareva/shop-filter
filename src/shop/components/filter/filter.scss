@@ -1,0 +1,45 @@
+@import '../../../breakpoints.scss';
+@import 'src/variables.scss';
+.filter-block {
+  padding: 25px 16px 64px;
+  &__title-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__reset,
+  &__apply {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #0d6efd;
+    border: none;
+    background-color: #1110;
+    cursor: pointer;
+  }
+  &__reset {
+    margin-bottom: 18px;
+  }
+  &__title {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    color: #1c1c1c;
+    margin-bottom: 15px;
+  }
+  &__check-row {
+    margin-bottom: 21px;
+    display: flex;
+    justify-content: space-between;
+  }
+  label {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #1c1c1c;
+  }
+}
+.brands {
+  border-top: 1px solid #dee2e7;
+  padding-top: 5px;
+}

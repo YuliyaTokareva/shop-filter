@@ -1,9 +1,18 @@
 @import '../../../breakpoints.scss';
 @import 'src/variables.scss';
+.products-body {
+  display: flex;
+  &__aside {
+    @include for-tablet-down {
+      display: none;
+    }
+  }
+}
 .products-list {
   background: $main-bg;
   padding: 16px 10px 18px;
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   grid-gap: 8px;
+  width: 100%;
 }
