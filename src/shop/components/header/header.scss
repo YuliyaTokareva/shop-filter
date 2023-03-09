@@ -1,0 +1,37 @@
+@import '../../../breakpoints.scss';
+@import 'src/variables.scss';
+.page-header {
+  background: #ffffff;
+  @include for-tablet-down {
+    display: none;
+  }
+  @include for-tablet-up {
+    height: 86px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__block {
+    margin: 0 auto;
+    @include for-tablet {
+      width: 944px;
+    }
+    @include for-laptop-up {
+      width: 1180px;
+    }
+  }
+  &__nav {
+    display: flex;
+    align-items: center;
+  }
+  &__name {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+    margin-left: 13px;
+    color: #8cb7f5;
+    :last-child {
+      color: #0d6efd;
+    }
+  }
+}

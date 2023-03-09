@@ -1,0 +1,111 @@
+@import '../../../breakpoints.scss';
+@import 'src/variables.scss';
+.card {
+  background: $main-card-bg;
+  border: $border-button-gray;
+  border-radius: $br;
+  display: flex;
+  padding: 8px;
+  align-items: center;
+  @include for-tablet-down {
+    max-height: 114px;
+  }
+  @include for-tablet-up {
+    max-height: 230px;
+    padding: 9px 7px 11px;
+  }
+}
+.image {
+  width: 98px;
+  height: 98px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $main-card-bg;
+  flex-grow: 0;
+  @include for-tablet-up {
+    height: 210px;
+    width: 210px;
+  }
+  &__photo {
+    max-width: 100%;
+    height: auto;
+
+    @include for-tablet-up {
+    }
+  }
+}
+.text {
+  max-width: 218px;
+  margin-left: 8px;
+  @include for-tablet-up {
+    max-width: 607px;
+    margin-left: 12px;
+  }
+  &__title {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: $color-text;
+    margin-bottom: 6px;
+    @include for-tablet-down {
+      min-height: 38px;
+    }
+    @include for-tablet-up {
+      font-weight: 500;
+      line-height: 22px;
+      color: $color-title;
+      margin-bottom: 16px;
+    }
+  }
+  &__price {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    color: $color-gray;
+    margin-bottom: 11px;
+    @include for-tablet-up {
+      letter-spacing: -0.2px;
+      font-size: 20px;
+      line-height: 28px;
+      margin-bottom: 4px;
+    }
+  }
+  &__brand {
+    color: $color-title-light;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    @include for-tablet-up {
+      letter-spacing: -0.2px;
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 7px;
+    }
+  }
+  &__description {
+    @include for-tablet-down {
+      display: none;
+    }
+    @include for-tablet-up {
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: -0.2px;
+      color: $color-text;
+      margin-bottom: 8px;
+    }
+  }
+  &__button {
+    @include for-tablet-down {
+      display: none;
+    }
+    @include for-tablet-up {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+      border: none;
+      color: $color-blue-dark;
+      background-color: #fff0;
+    }
+  }
+}

@@ -1,0 +1,56 @@
+@import 'breakpoints.scss';
+@import 'src/variables.scss';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  color: $color-text;
+  font-family: 'Inter', sans-serif;
+  background-color: #f7fafc;
+  font-size: 16px;
+}
+
+.page {
+  display: flex;
+  min-height: 100vh;
+  margin: auto;
+  margin-top: 1px;
+  flex-direction: column;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+button {
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+// .mob {
+//   @include for-large-up {
+//     display: none;
+//   }
+// }
+// .desktop {
+//   @include for-large-down {
+//     display: none;
+//   }
+// }
+// #root {
+//   display: flex;
+//   flex-direction: column;
+//   min-height: 100vh;
+// }
