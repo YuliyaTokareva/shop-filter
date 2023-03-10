@@ -6,7 +6,14 @@ import ArrowDown from '../svg/ArrowDown';
 import FilterBlock from '../filter/Filter';
 import './topSort.scss';
 
-const TopSort = ({ activeSortBtn, handlerClick, mobHandlerClick, conditionMobFilter }) => {
+const TopSort = ({
+  activeSortBtn,
+  handlerClick,
+  mobHandlerClick,
+  conditionMobFilter,
+  setPriceParam,
+  setBrandParam
+}) => {
   return (
     <>
       <div className="sort-block">
@@ -40,7 +47,7 @@ const TopSort = ({ activeSortBtn, handlerClick, mobHandlerClick, conditionMobFil
           <div className="filter-mobile__decorated-line">
             <span className="filter-mobile__decorated-triangle"></span>
           </div>
-          <FilterBlock />
+          <FilterBlock setPriceParam={setPriceParam} setBrandParam={setBrandParam} />
         </div>
       </div>
     </>

@@ -3,11 +3,11 @@ import ProductCard from '../productCard/ProductCard';
 import Filter from '../filter/Filter';
 import './products.scss';
 
-const Products = ({ dataProducts }) => {
+const Products = ({ dataProducts, setPriceParam, setBrandParam }) => {
   return (
     <div className="products-body">
       <aside className="products-body__aside">
-        <Filter />
+        <Filter setPriceParam={setPriceParam} setBrandParam={setBrandParam} />
       </aside>
       <div className="products-list">
         {dataProducts.map((product) => (
