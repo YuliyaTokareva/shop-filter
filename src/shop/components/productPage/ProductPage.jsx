@@ -4,7 +4,6 @@ import { dataProducts } from '../../../productsData';
 import Header from '../header/Header';
 import Breadcrumbs from '../breadcrumbs/Breadcrumbs';
 import Basket from '../svg/Basket';
-// import { dataProducts } from '../../../productsData';
 import './productPage.scss';
 
 const ProductPage = () => {

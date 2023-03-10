@@ -13,7 +13,7 @@
 }
 .sort {
   height: 50px;
-  background: #ffffff;
+  background: $main-card-bg;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,20 +22,20 @@
   padding: 0 15px;
 
   @include for-tablet-up {
-    border: 1px solid #dee2e7;
+    border: $border-button-gray;
     border-radius: 6px;
     height: 64px;
     justify-content: end;
   }
 
   button {
-    background: #ffffff;
-    border: 1px solid #dee2e7;
+    background: $main-card-bg;
+    border: $border-button-gray;
     border-radius: 6px;
     font-weight: 500;
     font-size: 13px;
     line-height: 16px;
-    color: #1c1c1c;
+    color: $color-title;
     flex-shrink: 0;
     @include for-tablet-up {
       font-size: 16px;
@@ -70,7 +70,7 @@
     }
   }
   .active {
-    border: 1px solid #0d6efd;
+    border: 1px solid $color-blue-dark;
   }
   &__btn-img {
     margin-left: 4px;
@@ -92,7 +92,7 @@
   }
 
   &__decorated-line {
-    background: #ffffff;
+    background: $main-card-bg;
     height: 8px;
     position: relative;
   }
@@ -102,8 +102,8 @@
     top: 0;
     width: 0;
     height: 0;
-    border-left: 16px solid #ffffff00;
-    border-right: 16px solid #ffffff00;
+    border-left: 16px solid $main-card-bg;
+    border-right: 16px solid $main-card-bg;
     border-bottom: 16px solid #f7fafc;
   }
 }

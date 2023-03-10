@@ -21,10 +21,10 @@
   }
 }
 .product-data-top {
-  background-color: #fff;
+  background-color: $main-card-bg;
   @include for-tablet-up {
     display: flex;
-    border: 1px solid #dee2e7;
+    border: $border-button-gray;
     border-radius: 6px;
     border-radius: 6px;
     min-height: 507px;
@@ -50,7 +50,7 @@
     left: 149px;
     top: 170px;
 
-    border: 1px solid #dee2e7;
+    border: $border-button-gray;
     border-radius: 6px;
   }
   img {
@@ -63,7 +63,7 @@
   }
 }
 .product-description {
-  background-color: #fff;
+  background-color: $main-card-bg;
   padding: 16px 16px 20px;
   @include for-tablet-up {
     padding: 0 0 0 22px;
@@ -74,7 +74,7 @@
     line-height: 22px;
     color: $color-text;
     margin-bottom: 8px;
-    color: #1c1c1c;
+    color: $color-title;
     @include for-tablet-up {
       font-weight: 600;
       font-size: 20px;
@@ -86,7 +86,7 @@
     font-weight: 600;
     font-size: 24px;
     line-height: 32px;
-    color: #1c1c1c;
+    color: $color-title;
     margin-bottom: 8px;
     @include for-tablet-up {
       font-size: 24px;
@@ -104,7 +104,7 @@
     background: linear-gradient(180deg, #127fff 0%, #0067ff 100%);
     border-radius: 6px;
     border: none;
-    color: #ffffff;
+    color: $main-card-bg;
     font-weight: 500;
     font-size: 16px;
     line-height: 19px;
@@ -151,11 +151,11 @@
   }
 }
 .product-text {
-  background-color: #fff;
+  background-color: $main-card-bg;
   padding: 20px 16px 46px;
 
   @include for-tablet-up {
-    border: 1px solid #dee2e7;
+    border: $border-button-gray;
     box-shadow: 0px 1px 3px rgb(56 56 56 / 10%);
     border-radius: 6px;
     margin-top: 33px;
