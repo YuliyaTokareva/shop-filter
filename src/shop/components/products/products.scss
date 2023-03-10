@@ -2,9 +2,26 @@
 @import 'src/variables.scss';
 .products-body {
   display: flex;
+  @include for-tablet {
+    width: 944px;
+  }
+  @include for-laptop-up {
+    width: 1180px;
+  }
+  @include for-tablet-up {
+    margin: 12px auto 58px;
+  }
   &__aside {
+    .filter-block {
+      padding: 0;
+    }
     @include for-tablet-down {
       display: none;
+    }
+    @include for-tablet-up {
+      width: 230px;
+      flex-shrink: 0;
+      margin-right: 22px;
     }
   }
 }
@@ -15,4 +32,7 @@
   grid-template-columns: minmax(0, 1fr);
   grid-gap: 8px;
   width: 100%;
+  @include for-tablet-up {
+    padding: 0;
+  }
 }

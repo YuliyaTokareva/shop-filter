@@ -2,10 +2,13 @@
 @import 'src/variables.scss';
 .filter-block {
   padding: 25px 16px 64px;
+  display: flex;
+  flex-direction: column;
   &__title-block {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 15px;
   }
   &__reset,
   &__apply {
@@ -17,15 +20,31 @@
     background-color: #1110;
     cursor: pointer;
   }
+  &__numper-block {
+    display: flex;
+    grid-gap: 6px;
+  }
+  &__numper-price {
+    display: flex;
+    flex-direction: column;
+  }
+  input[type='number'] {
+    background: #ffffff;
+    border: 1px solid #dee2e7;
+    border-radius: 6px;
+    min-width: 110px;
+    height: 40px;
+    margin-top: 5px;
+  }
   &__reset {
     margin-bottom: 18px;
+    align-self: flex-start;
   }
   &__title {
     font-weight: 600;
     font-size: 16px;
     line-height: 19px;
     color: #1c1c1c;
-    margin-bottom: 15px;
   }
   &__check-row {
     margin-bottom: 21px;
@@ -38,8 +57,123 @@
     line-height: 19px;
     color: #1c1c1c;
   }
+  &__range-input {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    input {
+      position: absolute;
+      width: 100%;
+      height: 5px;
+      top: -5px;
+      background: none;
+      pointer-events: none;
+    }
+  }
+  &__slider-track {
+    width: 100%;
+    height: 4px;
+    background: #afd0ff;
+    border-radius: 2px;
+    position: absolute;
+    bottom: 0;
+    margin: auto;
+    top: 0;
+  }
+  &__apply-laptop {
+    @include for-tablet-down {
+      display: none;
+    }
+    @include for-tablet-up {
+      width: 76px;
+      height: 40px;
+      background: #ffffff;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+      text-align: center;
+      color: #0d6efd;
+      flex: none;
+      order: 0;
+      flex-grow: 0;
+      border: 1px solid #dee2e7;
+      box-shadow: 0px 1px 2px rgba(56, 56, 56, 0.08);
+      border-radius: 6px;
+      align-self: center;
+      margin-bottom: 40px;
+    }
+  }
 }
 .brands {
   border-top: 1px solid #dee2e7;
-  padding-top: 5px;
+  padding-top: 15px;
+}
+input[type='range'] {
+  background-color: transparent;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 100%;
+  top: 0;
+  margin: auto;
+  bottom: 0;
+  pointer-events: none;
+  cursor: pointer;
+  position: absolute;
+}
+input[type='range']::-webkit-slider-thumb {
+  width: 20px;
+  height: 20px;
+  -webkit-appearance: none;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 1px solid #afd0ff;
+  box-shadow: 0px 2px 4px rgba(16, 0, 0, 0.1);
+  cursor: pointer;
+  pointer-events: auto;
+}
+input[type='range']::-ms-track {
+  height: 20px;
+  appearance: none;
+  pointer-events: auto;
+}
+input[type='range']::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  -webkit-appearance: none;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 1px solid #afd0ff;
+  box-shadow: 0px 2px 4px rgba(16, 0, 0, 0.1);
+  cursor: pointer;
+  pointer-events: auto;
+}
+input[type='range']::-ms-thumb {
+  width: 20px;
+  height: 20px;
+  appearance: none;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 1px solid #afd0ff;
+  box-shadow: 0px 2px 4px rgba(16, 0, 0, 0.1);
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+input[type='checkbox'] {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+}
+
+.laptop {
+  @include for-tablet-down {
+    display: none;
+  }
+}
+.mob {
+  @include for-tablet-up {
+    display: none;
+  }
 }

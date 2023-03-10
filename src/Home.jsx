@@ -8,18 +8,21 @@ import { dataProducts } from './productsData';
 
 const Home = () => {
   const [sortParam, setSortParam] = useState('hight');
+  const [priceParam, setpriceParam] = useState([150, 3000]);
   const [openMobFilter, setopenMobFilter] = useState(false);
   const products = useMemo(() => {
-    const productsList = dataProducts.sort((a, b) => {
-      switch (sortParam) {
-        case 'low':
-          return b.price - a.price;
-        case 'hight':
-          return a.price - b.price;
-      }
-    });
+    const productsList = dataProducts
+      .filter((el) => el.price >= priceParam[0] && el.price <= priceParam[1])
+      .sort((a, b) => {
+        switch (sortParam) {
+          case 'low':
+            return b.price - a.price;
+          case 'hight':
+            return a.price - b.price;
+        }
+      });
     return productsList;
-  }, [sortParam]);
+  }, [sortParam, priceParam]);
   const handlerClick = (method) => {
     setSortParam(method);
   };
