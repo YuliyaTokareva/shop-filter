@@ -3,7 +3,7 @@ import Products from '../shop/components/products/Products';
 import TopSort from '../shop/components/topSort/TopSort';
 import Breadcrumbs from '../shop/components/breadcrumbs/Breadcrumbs';
 // import Header from '../shop/components/header/Header';
-import Wrapper from '../shop/components/Wrapper/Wrapper';
+import Wrapper from '../shop/components/wrapper/Wrapper';
 
 import { startRange, endRange } from '../filterData';
 import { dataProducts } from '../productsData';
