@@ -1,10 +1,12 @@
 import React, { useMemo, useState } from 'react';
-import Products from './shop/components/products/Products';
-import TopSort from './shop/components/topSort/TopSort';
-import Breadcrumbs from './shop/components/breadcrumbs/Breadcrumbs';
-import Header from './shop/components/header/Header';
-import { startRange, endRange } from './filterData';
-import { dataProducts } from './productsData';
+import Products from '../shop/components/products/Products';
+import TopSort from '../shop/components/topSort/TopSort';
+import Breadcrumbs from '../shop/components/breadcrumbs/Breadcrumbs';
+// import Header from '../shop/components/header/Header';
+import Wrapper from '../shop/components/Wrapper/Wrapper';
+
+import { startRange, endRange } from '../filterData';
+import { dataProducts } from '../productsData';
 
 const Home = () => {
   const [sortParam, setSortParam] = useState('hight');
@@ -37,22 +39,23 @@ const Home = () => {
 
   return (
     <div className="page-body">
-      <Header />
-      <Breadcrumbs />
-      <TopSort
-        activeSortBtn={sortParam}
-        handlerClick={handlerClick}
-        mobHandlerClick={handlerClickMobFilter}
-        conditionMobFilter={openMobFilter}
-        setPriceParam={setPriceParam}
-        setBrandParam={setBrandParam}
-      />
-
-      <Products
-        dataProducts={products}
-        setPriceParam={setPriceParam}
-        setBrandParam={setBrandParam}
-      />
+      <Wrapper>
+        {/* <Header /> */}
+        {/* <Breadcrumbs /> */}
+        <TopSort
+          activeSortBtn={sortParam}
+          handlerClick={handlerClick}
+          mobHandlerClick={handlerClickMobFilter}
+          conditionMobFilter={openMobFilter}
+          setPriceParam={setPriceParam}
+          setBrandParam={setBrandParam}
+        />
+        <Products
+          dataProducts={products}
+          setPriceParam={setPriceParam}
+          setBrandParam={setBrandParam}
+        />
+      </Wrapper>
     </div>
   );
 };
