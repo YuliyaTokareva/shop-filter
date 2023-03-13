@@ -1,8 +1,6 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 import { dataProducts } from '../../../productsData';
-import Header from '../header/Header';
-import Breadcrumbs from '../breadcrumbs/Breadcrumbs';
 import Basket from '../svg/Basket';
 import './productPage.scss';
 
@@ -14,9 +12,6 @@ const ProductPage = () => {
     return '';
   }
   return (
-    // <div className="product-page">
-    //   <Header />
-    //   <Breadcrumbs />
     <div className="product-data">
       <div className="product-data-top">
         <div className="product-image">
@@ -52,7 +47,6 @@ const ProductPage = () => {
         <p className="product-text__description">{productData.text}</p>
       </div>
     </div>
-    // </div>
   );
 };
 
