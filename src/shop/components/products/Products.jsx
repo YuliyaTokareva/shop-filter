@@ -10,11 +10,9 @@ const Products = ({ dataProducts, setPriceParam, setBrandParam }) => {
         <Filter setPriceParam={setPriceParam} setBrandParam={setBrandParam} />
       </aside>
       <div className="products-list">
-        {dataProducts.length === 0 ? (
-          <h3>Loading...</h3>
-        ) : (
-          dataProducts.map((product) => <ProductCard data={product} key={product.id.toString()} />)
-        )}
+        {dataProducts.map((product) => (
+          <ProductCard data={product} key={product.id.toString()} />
+        ))}
       </div>
     </div>
   );

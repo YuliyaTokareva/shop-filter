@@ -10,7 +10,7 @@ const Home = () => {
   const [priceParam, setPriceParam] = useState([startRange, endRange]);
   const [brandParam, setBrandParam] = useState([]);
   const [openMobFilter, setopenMobFilter] = useState(false);
-
+  const [noResultFilter, setNoResultFilter] = useState('');
   const [getData, setgetData] = useState([]);
   useEffect(() => {
     setTimeout(() => {
