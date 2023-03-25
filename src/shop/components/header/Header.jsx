@@ -9,8 +9,8 @@ const Header = () => {
         <div className="page-header__nav">
           <Logo />
           <div className="page-header__name">
-            <span>Frontend task | </span>
-            <span>Yuliia Tokarieva</span>
+            <span>Shop </span>
+            <span>filter</span>
           </div>
         </div>
       </div>
