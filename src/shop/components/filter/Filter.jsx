@@ -16,10 +16,20 @@ const Filter = ({ setPriceParam, setBrandParam }) => {
       [name]: checked
     });
   };
+
+  const handlerResetFilter = () => {
+    setPriceParam([startRange, endRange]);
+    setBrandParam([]);
+    setMinValue(startRange);
+    setMaxValue(endRange);
+    setFillColorPercent([0, 100]);
+    setCheckboxStatus(dataCheckbox);
+  };
   const handlerSubmit = () => {
     setPriceParam([minValue, maxValue]);
     setBrandParam(brandToFilter(checkboxStatus));
   };
+
   const handlerNumber = (e, typeValue) => {
     let newVal = Number(e.target.value);
 
@@ -50,7 +60,9 @@ const Filter = ({ setPriceParam, setBrandParam }) => {
 
   return (
     <div className="filter-block">
-      <button className="filter-block__reset mob">Reset filter</button>
+      <button className="filter-block__reset mob" onClick={() => handlerResetFilter()}>
+        Reset filter
+      </button>
       <div className="filter-all-prise">
         <div className="filter-block__title-block">
           <span className="filter-block__title">Price range, $</span>
@@ -127,30 +139,62 @@ const Filter = ({ setPriceParam, setBrandParam }) => {
         </div>
         <div className="filter-block__check-row">
           <label htmlFor="samsung">Samsung</label>
-          <input type="checkbox" id="samsung" name="samsung" onChange={(e) => handleChange(e)} />
+          <input
+            type="checkbox"
+            id="samsung"
+            name="samsung"
+            checked={checkboxStatus.samsung ? true : false}
+            onChange={(e) => handleChange(e)}
+          />
         </div>
         <div className="filter-block__check-row">
           <label htmlFor="apple">Apple</label>
-          <input type="checkbox" id="apple" name="apple" onChange={(e) => handleChange(e)} />
+          <input
+            type="checkbox"
+            id="apple"
+            name="apple"
+            checked={checkboxStatus.apple ? true : false}
+            onChange={(e) => handleChange(e)}
+          />
         </div>
         <div className="filter-block__check-row">
           <label htmlFor="huawei">Huawei</label>
-          <input type="checkbox" id="huawei" name="huawei" onChange={(e) => handleChange(e)} />
+          <input
+            type="checkbox"
+            id="huawei"
+            name="huawei"
+            checked={checkboxStatus.huawei ? true : false}
+            onChange={(e) => handleChange(e)}
+          />
         </div>
         <div className="filter-block__check-row">
           <label htmlFor="pocco">Pocco</label>
-          <input type="checkbox" id="pocco" name="pocco" onChange={(e) => handleChange(e)} />
+          <input
+            type="checkbox"
+            id="pocco"
+            name="pocco"
+            checked={checkboxStatus.pocco ? true : false}
+            onChange={(e) => handleChange(e)}
+          />
         </div>
         <div className="filter-block__check-row">
           <label htmlFor="lenovo">Lenovo</label>
-          <input type="checkbox" id="lenovo" name="lenovo" onChange={(e) => handleChange(e)} />
+          <input
+            type="checkbox"
+            id="lenovo"
+            name="lenovo"
+            checked={checkboxStatus.lenovo ? true : false}
+            onChange={(e) => handleChange(e)}
+          />
         </div>
       </div>
       <div className="filter-all-button-send">
         <button className="filter-block__apply-laptop laptop" onClick={() => handlerSubmit()}>
           Apply
         </button>
-        <button className="filter-block__reset laptop">Reset filter</button>
+        <button className="filter-block__reset laptop" onClick={() => handlerResetFilter()}>
+          Reset filter
+        </button>
       </div>
     </div>
   );

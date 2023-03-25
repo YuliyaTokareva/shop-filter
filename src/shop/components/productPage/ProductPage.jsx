@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { dataProducts } from '../../../productsData';
 import Basket from '../svg/Basket';
 import './productPage.scss';
@@ -7,6 +7,7 @@ import './productPage.scss';
 const ProductPage = () => {
   const { pathname } = useLocation();
   const productId = pathname.slice(1);
+
   const productData = dataProducts.filter((product) => product.id.toString() === productId)[0];
   if (!productData) {
     return '';

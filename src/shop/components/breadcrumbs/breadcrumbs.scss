@@ -46,6 +46,7 @@
     line-height: 22px;
     color: $color-title;
     margin-left: 20px;
+    cursor: pointer;
     @include for-tablet-up {
       font-weight: 400;
       font-size: 16px;

@@ -1,7 +1,8 @@
 import React from 'react';
-const ArrowBack = () => {
+const ArrowBack = ({ onClick }) => {
   return (
     <svg
+      onClick={onClick}
       className="breadcrumbs__arrow-back"
       width="16"
       height="16"
