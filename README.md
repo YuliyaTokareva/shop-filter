@@ -30,9 +30,9 @@
 </ul>
 <h3>Installation:</h3>
 <p>You can run this project:</p>
-<pre>sh
-npm i
-npm run start
+<pre>
+npm i</pre>
+<pre>npm run start
 </pre>
 
 <hr/>
