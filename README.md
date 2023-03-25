@@ -36,7 +36,7 @@ npm run start
 - [ESLint](https://eslint.org/)
 - [Webpack](https://webpack.js.org/)
 - [Babel](https://babeljs.io/)
-- ## [Prettier](https://prettier.io/)
+- [Prettier](https://prettier.io/)
 
 ## Author
 
