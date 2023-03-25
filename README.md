@@ -30,10 +30,10 @@
 </ul>
 <h3>Installation:</h3>
 <p>You can run this project:</p>
-```sh
+<pre>sh
 npm i
 npm run start
-```
+</pre>
 
 <hr/>
 <h2>Author</h2>
