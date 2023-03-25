@@ -26,13 +26,17 @@
 <li><a href="https://eslint.org/" rel="nofollow">ESLint</a></li>
 <li><a href="https://webpack.js.org/" rel="nofollow">Webpack</a></li>
 <li><a href="https://babeljs.io/" rel="nofollow">Babel</a></li>
-
+<li><a href="https://prettier.io/" rel="nofollow">Prettier</a></li>
 </ul>
 <h3>Installation:</h3>
 <p>You can run this project:</p>
-<pre><span class="pl-c1">cd</span> [Your folder]
-npm i</pre>
-<pre>npm run start</pre>
+```sh
+npm i
+```
+```sh
+npm run start
+```
+<hr/>
 <h2>Author</h2>
 <ul>
 <li>Yuliia Tokarieva</li>
