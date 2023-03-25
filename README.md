@@ -6,10 +6,10 @@
 
 You can run this project:
 
-````
-npm i```
-```npm run start
-````
+```
+npm i
+npm run start
+```
 
 ### Design:
 
@@ -35,8 +35,8 @@ npm i```
 - [react-router-dom v6](https://reactrouter.com/en/main)
 - [ESLint](https://eslint.org/)
 - [Webpack](https://webpack.js.org/)
-- [Babel](https://babeljs.io/) -[Prettier](https://prettier.io/)
-  --
+- [Babel](https://babeljs.io/)
+- ## [Prettier](https://prettier.io/)
 
 ## Author
 
