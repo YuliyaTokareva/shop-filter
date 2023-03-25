@@ -32,10 +32,9 @@
 <p>You can run this project:</p>
 ```sh
 npm i
-```
-```sh
 npm run start
 ```
+
 <hr/>
 <h2>Author</h2>
 <ul>
