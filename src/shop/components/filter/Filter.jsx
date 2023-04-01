@@ -57,7 +57,6 @@ const Filter = ({ setPriceParam, setBrandParam }) => {
         }
     }
   };
-
   return (
     <div className="filter-block">
       <button className="filter-block__reset mob" onClick={() => handlerResetFilter()}>

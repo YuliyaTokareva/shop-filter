@@ -50,7 +50,7 @@ module.exports = (env, argv) => {
       historyApiFallback: true,
       open: true,
       hot: true,
-      port: 8090
+      port: 8080
     },
     performance: {
       hints: false,

@@ -23,6 +23,10 @@
   align-items: center;
   background: $main-card-bg;
   flex-grow: 0;
+  background-position: center;
+  background-size: contain;
+  flex-shrink: 0;
+  background-repeat: no-repeat;
   @include for-tablet-up {
     height: 210px;
     width: 210px;
@@ -93,6 +97,7 @@
       letter-spacing: -0.2px;
       color: $color-text;
       margin-bottom: 8px;
+      @include text-ellipsis($lines: 1);
     }
   }
   &__button {

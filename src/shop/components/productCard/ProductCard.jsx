@@ -6,8 +6,8 @@ const ProductCard = ({ data }) => {
   const navigate = useNavigate();
   return (
     <article className="card" onClick={() => navigate(`${data.id}`)}>
-      <div className="image">
-        <img src={`${data.img}`} alt={data.name} className="image__photo" />
+      <div className="image" style={{ backgroundImage: `url(${data.img})` }}>
+        {/* <img src={`${data.image}`} alt={data.name} className="image__photo" /> */}
       </div>
       <div className="text">
         <h2 className="text__title">{data.name}</h2>

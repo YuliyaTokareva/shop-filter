@@ -12,7 +12,8 @@ const TopSort = ({
   mobHandlerClick,
   conditionMobFilter,
   setPriceParam,
-  setBrandParam
+  setBrandParam,
+  priceParam
 }) => {
   return (
     <>
@@ -42,6 +43,7 @@ const TopSort = ({
           </button>
         </div>
       </div>
+
       <div className={conditionMobFilter === true ? 'filter-mobile open' : 'filter-mobile'}>
         <div className="filter-mobile__block">
           <div className="filter-mobile__decorated-line">
