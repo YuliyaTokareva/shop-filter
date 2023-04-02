@@ -19,9 +19,6 @@ const Products = ({ spinner, dataProducts, setPriceParam, setBrandParam }) => {
               <ProductCard data={product} key={product.id.toString()} />
             ))
           : ''}
-        {dataProducts.map((product) => (
-          <ProductCard data={product} key={product.id.toString()} />
-        ))}
       </div>
     </div>
   );
