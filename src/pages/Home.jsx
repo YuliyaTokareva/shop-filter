@@ -50,7 +50,7 @@ const Home = ({ getProductList, productsList }) => {
   const handlerClickMobFilter = () => {
     setopenMobFilter(!openMobFilter);
   };
-  console.log(productsList);
+
   return (
     <div className="page-body">
       <Wrapper>
